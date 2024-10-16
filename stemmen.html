@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landelijke Verkiezingen</title>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="homepage.js">
+</head>
+<body>
+    <div class="container">
+        <h1>Stem op jouw partij - Landelijke Verkiezingen</h1>
+
+        <p>Kies een partij en stem hieronder:</p>
+
+        <div class="vote-section">
+            <button class="vote-btn" onclick="vote('partijA')">Partij A</button>
+            <button class="vote-btn" onclick="vote('partijB')">Partij B</button>
+            <button class="vote-btn" onclick="vote('partijC')">Partij C</button>
+        </div>
+
+        <div id="results">
+            <h2>Stemresultaten</h2>
+            <p>Partij A: <span id="partijA">0</span> stemmen</p>
+            <p>Partij B: <span id="partijB">0</span> stemmen</p>
+            <p>Partij C: <span id="partijC">0</span> stemmen</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
