@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+=======
     <title>Elektronisch Stemmen</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -106,5 +108,6 @@
     <!-- Footer -->
     <?php include 'partials/footer.php'; ?>
 
+>>>>>>> f2606dfb8e731afbcc4104a1d49bbbec6e8e6b3b
 </body>
 </html>
