@@ -1,14 +1,16 @@
-<?php
-$host = 'localhost';
-$dbname = 'proefexamen';
-$username = 'root';
-$password = '';
+<!-- <?php
+$servername = "localhost";  // Je database server (meestal 'localhost')
+$username = "";         // Je databasegebruikersnaam
+$password = "";             // Je databasewachtwoord (laat leeg als er geen wachtwoord is)
+$dbname = "proefexamen";   // De naam van je database
 
-// try {
-//     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-//     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//     echo "Verbinding succesvol!";
-// } catch(PDOException $e) {
-//     echo "Verbinding mislukt: " . $e->getMessage();
-// }
-?>
+// Maak de verbinding
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check de verbinding
+if ($conn->connect_error) {
+    die("Verbinding mislukt: " . $conn->connect_error);
+} else {
+    echo "Verbinding succesvol!";
+}
+?> -->

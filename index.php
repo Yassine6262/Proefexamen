@@ -99,6 +99,5 @@
     </section>
     <!-- Footer -->
     <?php include 'partials/footer.php'; ?>
->>>>>>> f2606dfb8e731afbcc4104a1d49bbbec6e8e6b3b
 </body>
 </html>
