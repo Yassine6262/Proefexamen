@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- Navigatiebalk -->
     <?php include 'partials/nav.php'; ?>
-
     <!-- Hero Sectie -->
     <section class="hero">
         <div class="hero-content">
@@ -18,12 +16,11 @@
             <h1>Breng uw stem uit, veilig en digitaal!</h1>
             <p>Elektronisch stemmen maakt het eenvoudiger dan ooit om je stem uit te brengen tijdens verkiezingen. Ontdek hoe je snel, veilig en betrouwbaar kunt stemmen, waar je ook bent.</p>
             <div class="cta-buttons">
-                <a href="#" class="btn">Stem Nu</a>
+                <a href="stemmen.php" class="btn">Stem Nu</a>
                 <a href="#" class="btn-secondary">Hoe Werkt Het?</a>
             </div>
         </div>
     </section>
-
     <!-- Waarom Elektronisch Stemmen? -->
     <section class="why-electronic-vote">
         <h2>De Toekomst van Stemmen</h2>
@@ -44,7 +41,6 @@
         </div>
         <a href="#" class="btn">Meer weten</a>
     </section>
-
     <!-- Hoe Werkt Het? -->
     <section class="how-it-works">
         <h2>Zo Eenvoudig is Stemmen</h2>
@@ -64,7 +60,6 @@
         </div>
         <a href="#" class="btn-secondary">Bekijk de volledige uitleg</a>
     </section>
-
     <!-- Veiligheid en Privacy -->
     <section class="security">
         <h2>Jouw Stem is Veilig</h2>
@@ -85,7 +80,6 @@
         </div>
         <a href="#" class="btn">Meer over onze beveiliging</a>
     </section>
-
     <!-- Veelgestelde Vragen -->
     <section class="faq">
         <h2>Veelgestelde Vragen</h2>
@@ -103,9 +97,8 @@
         </div>
         <a href="#" class="btn-secondary">Bekijk alle vragen</a>
     </section>
-
     <!-- Footer -->
     <?php include 'partials/footer.php'; ?>
-
+>>>>>>> f2606dfb8e731afbcc4104a1d49bbbec6e8e6b3b
 </body>
 </html>
