@@ -51,6 +51,7 @@ nav ul li a:hover {
 .hero-content {
     max-width: 600px;
     margin: 0 auto;
+    color: black;
 }
 
 .hero h1 {
@@ -159,3 +160,82 @@ footer .social-media img {
         gap: 0.5rem;
     }
 }
+
+/* Algemene stijl voor de container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Stijl voor de titel */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraafstijl */
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Stijl voor de stemknoppen */
+.vote-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.vote-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    margin: 5px;
+}
+
+.vote-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Resultaten sectie stijl */
+#results {
+    margin-top: 40px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+#results h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#results p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsieve weergave voor mobiele apparaten */
+@media (max-width: 600px) {
+    .vote-section {
+        flex-direction: column;
+    }
+
+    .vote-btn {
+        width: 100%;
+    }
+}
+
