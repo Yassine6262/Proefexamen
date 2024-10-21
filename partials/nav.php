@@ -6,6 +6,5 @@
         <li><a href="#">Veiligheid</a></li>
         <li><a href="#">FAQ</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">NL/EN</a></li>
     </ul>
 </nav>

@@ -39,6 +39,15 @@ nav ul li a:hover {
 }
 
 /* Hero Sectie */
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+}
+
 .hero {
     background-image: url('hero-image.jpg');
     background-size: cover;

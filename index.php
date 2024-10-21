@@ -14,6 +14,7 @@
     <!-- Hero Sectie -->
     <section class="hero">
         <div class="hero-content">
+        <img src="images/stemmen.png" alt="Elektronisch stemmen" class="hero-image">
             <h1>Breng uw stem uit, veilig en digitaal!</h1>
             <p>Elektronisch stemmen maakt het eenvoudiger dan ooit om je stem uit te brengen tijdens verkiezingen. Ontdek hoe je snel, veilig en betrouwbaar kunt stemmen, waar je ook bent.</p>
             <div class="cta-buttons">
