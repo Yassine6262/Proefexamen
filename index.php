@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
     <title>Elektronisch Stemmen</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,7 +19,7 @@
             <h1>Breng uw stem uit, veilig en digitaal!</h1>
             <p>Elektronisch stemmen maakt het eenvoudiger dan ooit om je stem uit te brengen tijdens verkiezingen. Ontdek hoe je snel, veilig en betrouwbaar kunt stemmen, waar je ook bent.</p>
             <div class="cta-buttons">
-                <a href="stemmen.php" class="btn">Stem Nu</a>
+
                 <a href="#" class="btn-secondary">Hoe Werkt Het?</a>
             </div>
         </div>
