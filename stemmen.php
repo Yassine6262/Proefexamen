@@ -110,6 +110,7 @@ $parties_result = $conn->query($parties_sql);
     </style>
 </head>
 <body>
+    
     <h1>Stem op een Politieke Partij</h1>
 
     <?php echo $message; ?>

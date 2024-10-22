@@ -7,6 +7,6 @@
         <li><a href="#">Veiligheid</a></li>
         <li><a href="#">FAQ</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="./admin/add_partij.php">test</a></li>
+        <li><a href="./admin/add_partij.php">Partij toevoegen</a></li>
     </ul>
 </nav>

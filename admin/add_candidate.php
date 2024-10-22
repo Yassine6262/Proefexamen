@@ -1,12 +1,14 @@
 <?php
+
 // Database connectie configuratie
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "recruitment_db";
+$username = "root";  // Vervang dit door uw MySQL-gebruikersnaam
+$password = "";      // Vervang dit door uw MySQL-wachtwoord
+$dbname = "voting_system"; // De naam van de database
 
-// Maak database verbinding
+// Maak verbinding met de database
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 
 // Check connectie
 if ($conn->connect_error) {
