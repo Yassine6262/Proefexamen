@@ -80,9 +80,10 @@
         </div>
         <a href="#" class="btn">Meer over onze beveiliging</a>
     </section>
-    <!-- Veelgestelde Vragen -->
-    <section class="faq">
-        <h2>Veelgestelde Vragen</h2>
+   <!-- Veelgestelde Vragen -->
+<section class="faq">
+    <h2>Veelgestelde Vragen</h2>
+    <div class="faq-container">
         <div class="faq-item">
             <h3>Is mijn stem echt anoniem?</h3>
             <p>Ja, jouw stem wordt versleuteld en losgekoppeld van je identiteit.</p>
@@ -95,8 +96,10 @@
             <h3>Wat als ik geen internet heb?</h3>
             <p>Er blijven alternatieven beschikbaar voor mensen zonder toegang tot het internet.</p>
         </div>
-        <a href="#" class="btn-secondary">Bekijk alle vragen</a>
-    </section>
+    </div>
+    <a href="#" class="btn-secondary">Bekijk alle vragen</a>
+</section>
+
     <!-- Footer -->
     <?php include 'partials/footer.php'; ?>
 </body>

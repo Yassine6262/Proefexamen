@@ -113,21 +113,30 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.benefits, .steps, .security-features, .faq-item {
+.benefits, .steps, .security-features, .faq-container {
     display: flex;
     justify-content: center;
     gap: 2rem;
     margin-top: 1.5rem;
 }
 
-.benefit, .step, .feature, .faq-item {
+.benefit, .step, .feature {
     max-width: 300px;
     padding: 1rem;
     background-color: #f4f4f4;
     border-radius: 8px;
 }
 
+.faq-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .faq-item {
+    max-width: 300px;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
     text-align: left;
 }
 
@@ -159,7 +168,7 @@ footer .social-media img {
 
 /* Responsiviteit */
 @media (max-width: 768px) {
-    .benefits, .steps, .security-features, .faq-item {
+    .benefits, .steps, .security-features, .faq-container {
         flex-direction: column;
         align-items: center;
     }
@@ -247,3 +256,4 @@ p {
         width: 100%;
     }
 }
+
