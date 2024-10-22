@@ -115,7 +115,7 @@ $parties_result = $conn->query($parties_sql);
     <?php echo $message; ?>
 
     <form method="post">
-        <input type="text" name="voter_id" placeholder="Uw unieke kiezer-ID" required>
+        <input type="text" name="voter_id" placeholder="Uw naam" required>
         <select name="party_id" required>
             <option value="">Kies een partij</option>
             <?php

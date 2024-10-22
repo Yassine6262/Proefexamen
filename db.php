@@ -1,8 +1,9 @@
 <!-- <?php
-$servername = "localhost";  // Je database server (meestal 'localhost')
-$username = "";         // Je databasegebruikersnaam
-$password = "";             // Je databasewachtwoord (laat leeg als er geen wachtwoord is)
-$dbname = "proefexamen";   // De naam van je database
+// Database connection
+$servername = "localhost";
+$username = "root";  // Vervang dit door uw MySQL-gebruikersnaam
+$password = "";      // Vervang dit door uw MySQL-wachtwoord
+$dbname = "voting_system";
 
 // Maak de verbinding
 $conn = new mysqli($servername, $username, $password, $dbname);
