@@ -3,14 +3,34 @@ require 'includes/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $role = $_POST['role'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+    
+    // Controleer of velden zijn ingevuld
+    if (empty($username) || empty($password) || empty($email)) {
+        echo "Alle velden zijn verplicht!";
+    } else {
+        // Het wachtwoord beveiligen met password_hash()
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        
+        // Voeg de gebruiker toe aan de database
+        $sql = "INSERT INTO users (username, password, email, role, is_active, created_at) 
+                VALUES (?, ?, ?, 'stemgerechtigde', TRUE, NOW())";
 
-    $stmt = $pdo->prepare("INSERT INTO users (username, password, role) VALUES (?, ?, ?)");
-    $stmt->execute([$username, $password, $role]);
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sss", $username, $hashed_password, $email);
 
-    echo "Registratie succesvol!";
+        if ($stmt->execute()) {
+            echo "Registratie succesvol!";
+        } else {
+            echo "Er is een fout opgetreden: " . $conn->error;
+        }
+
+        $stmt->close();
+    }
 }
+
+$conn->close();
 ?>
 
 <!DOCTYPE html>
