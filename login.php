@@ -1,28 +1,38 @@
 <?php
 session_start();
-include 'db.php';
+require 'includes/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Simpele query om de gebruiker te vinden
-    $sql = "SELECT * FROM users WHERE username = ?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    
-    if ($result->num_rows === 1) {
-        $user = $result->fetch_assoc();
-        if (password_verify($password, $user['password'])) {
-            $_SESSION['user'] = $user['username'];
-            header("Location: welcome.php");
-        } else {
-            echo "Onjuiste wachtwoord!";
-        }
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt->execute([$username]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($user && password_verify($password, $user['password'])) {
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['role'] = $user['role'];
+        header('Location: dashboard.php');
     } else {
-        echo "Gebruiker niet gevonden!";
+        echo "Ongeldige inloggegevens!";
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Inloggen</title>
+</head>
+<body>
+    <h2>Inloggen</h2>
+    <form method="POST" action="login.php">
+        <input type="text" name="username" placeholder="Gebruikersnaam" required><br>
+        <input type="password" name="password" placeholder="Wachtwoord" required><br>
+        <button type="submit">Inloggen</button>
+    </form>
+</body>
+</html>
