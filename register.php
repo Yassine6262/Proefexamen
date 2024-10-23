@@ -3,34 +3,24 @@ require 'includes/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
-    $password = $_POST['password'];
-    $email = $_POST['email'];
-    
-    // Controleer of velden zijn ingevuld
-    if (empty($username) || empty($password) || empty($email)) {
-        echo "Alle velden zijn verplicht!";
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $role = $_POST['role'];
+
+    // Controleer of de gebruikersnaam al bestaat
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE username = ?");
+    $stmt->execute([$username]);
+    $userExists = $stmt->fetchColumn();
+
+    if ($userExists > 0) {
+        echo "Deze gebruikersnaam is al in gebruik. Kies een andere.";
     } else {
-        // Het wachtwoord beveiligen met password_hash()
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        
-        // Voeg de gebruiker toe aan de database
-        $sql = "INSERT INTO users (username, password, email, role, is_active, created_at) 
-                VALUES (?, ?, ?, 'stemgerechtigde', TRUE, NOW())";
+        // Voeg de nieuwe gebruiker toe als de gebruikersnaam uniek is
+        $stmt = $pdo->prepare("INSERT INTO users (username, password, role) VALUES (?, ?, ?)");
+        $stmt->execute([$username, $password, $role]);
 
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss", $username, $hashed_password, $email);
-
-        if ($stmt->execute()) {
-            echo "Registratie succesvol!";
-        } else {
-            echo "Er is een fout opgetreden: " . $conn->error;
-        }
-
-        $stmt->close();
+        echo "Registratie succesvol!";
     }
 }
-
-$conn->close();
 ?>
 
 <!DOCTYPE html>
